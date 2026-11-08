@@ -100,9 +100,10 @@ are red.
 ## Thresholds
 
 The default threshold is SSIM `>= 0.95` and perceptual match `>= 95%` against
-Chromium. Each fixture may carry its own thresholds. `--thresholds
-<ssim>,<perceptual>` overrides the effective threshold for the run and prints a
-prominent warning; it never changes a fixture definition.
+Chromium. Each fixture may carry its own thresholds.
+`--thresholds <ssim>,<perceptual>` overrides the effective threshold for
+the run and prints a prominent warning; it never changes a fixture
+definition.
 
 A fixture is in scope by default. A fixture that exposes a known renderer gap is
 marked `in_scope: false` and carries a `known_gap` note in `components.rs` and
