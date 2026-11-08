@@ -1,0 +1,21 @@
+[package]
+name = "strata_mdbook"
+version = "0.1.0"
+edition = "2021"
+authors = ["Strata Contributors"]
+license = "MIT"
+description = "Strata mdBook interactive documentation preprocessor for live runnable RSX widgets"
+repository = "https://github.com/strataui/docs"
+
+[[bin]]
+name = "mdbook-strata"
+path = "src/main.rs"
+
+[lib]
+name = "strata_mdbook"
+path = "src/lib.rs"
+
+[dependencies]
+strata_codegen_js = { path = "../../mica/crates/strata_codegen_js" }
+strata_style = { path = "../../strata/crates/core/strata_style" }
+strata_js = { path = "../../strata/crates/runtime/strata_js" }
