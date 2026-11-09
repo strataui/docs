@@ -20,22 +20,22 @@ hero:
       link: https://github.com/larvance/strata
 
 features:
-  - icon: ⚡
+  - icon: "[SYS]"
     title: Zero Chromium Architecture
     details: Eliminates heavy WebViews, CEF, and V8 runtimes. Starts up in under 8ms with an idle memory footprint below 3MB.
-  - icon: 📡
+  - icon: "[DAG]"
     title: Reactive Signals DAG
     details: Fine-grained reactivity via use_signal and use_effect. Direct node mutation without virtual DOM dirty reconciliation overhead.
-  - icon: 📐
+  - icon: "[CSS]"
     title: Pixel-Perfect Layout Parity
     details: Spec-compliant CSS Box Model, Flexbox Level 1, and Grid Level 2 solvers with subpixel text shaping and HarfBuzz fonts.
-  - icon: 🚀
+  - icon: "[PAR]"
     title: Multi-Threaded Subtrees
     details: Parallel subtree reconciliation across Rayon work-stealing threads based on the 5 Axioms of Layout Containment.
-  - icon: 🎨
+  - icon: "[GPU]"
     title: Analytical GPU & SDF Pipeline
     details: Direct Vulkan, Metal, Direct3D 12, and WebGPU backends with Slug-tier cubic Bezier font and curve rasterization.
-  - icon: 🌐
+  - icon: "[UNI]"
     title: Universal Multi-Target Engine
     details: Write once in RSX and compile to native Desktop (macOS/Win/Linux), Mobile (iOS/Android), Web (WASM/JS), and Terminal (TUI).
 ---
