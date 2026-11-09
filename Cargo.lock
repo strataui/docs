@@ -3,38 +3,193 @@
 version = 4
 
 [[package]]
+name = "strata_mdbook"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_a11y"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_agent_ui"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_aria"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_audio"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_benchmark"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_build"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_charts"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_chromium_surface"
+version = "0.1.0"
+
+[[patch.unused]]
 name = "strata_codegen_js"
 version = "0.1.0"
-dependencies = [
- "strata_dom",
- "strata_primitives",
- "strata_style",
-]
 
-[[package]]
+[[patch.unused]]
+name = "strata_crdt"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_device"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_devtools"
+version = "0.1.0"
+
+[[patch.unused]]
 name = "strata_dom"
 version = "0.1.0"
 
-[[package]]
+[[patch.unused]]
+name = "strata_editor"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_ffi"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_form"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_gpu_path"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_hot_reload"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_i18n"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_icons"
+version = "0.1.0"
+
+[[patch.unused]]
 name = "strata_js"
 version = "0.1.0"
 
-[[package]]
-name = "strata_mdbook"
+[[patch.unused]]
+name = "strata_layout"
 version = "0.1.0"
-dependencies = [
- "strata_codegen_js",
- "strata_js",
- "strata_style",
-]
 
-[[package]]
+[[patch.unused]]
+name = "strata_macro"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_mcp"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_mobile_test"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_motion"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_parallel"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_parity_tauri"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_platform"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_plugin_runtime"
+version = "0.1.0"
+
+[[patch.unused]]
 name = "strata_primitives"
 version = "0.1.0"
 
-[[package]]
+[[patch.unused]]
+name = "strata_query"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_render"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_router"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_sim"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_storage"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_store"
+version = "0.1.0"
+
+[[patch.unused]]
 name = "strata_style"
 version = "0.1.0"
-dependencies = [
- "strata_primitives",
-]
+
+[[patch.unused]]
+name = "strata_table"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_toast"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_tui"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_ui"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_vfs"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_virtual"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_web_api"
+version = "0.1.0"
+
+[[patch.unused]]
+name = "strata_web_reader"
+version = "0.1.0"

@@ -16,6 +16,3 @@ name = "strata_mdbook"
 path = "src/lib.rs"
 
 [dependencies]
-strata_codegen_js = { path = "../../mica/crates/strata_codegen_js" }
-strata_style = { path = "../../strata/crates/core/strata_style" }
-strata_js = { path = "../../strata/crates/runtime/strata_js" }
