@@ -17,18 +17,18 @@ Strata requires:
 
 ## 1. Installing the Strata CLI
 
-Install the official Strata CLI toolchain directly via Cargo from GitHub:
+Install the official Strata CLI toolchain directly via Cargo from crates.io:
 
 ```bash
-cargo install --git https://github.com/larvance/strata strata_cli --locked
+cargo install strata-ui-cli --locked
 ```
 
-Or build and install directly from a local clone:
+Or build and install directly from the CLI repository:
 
 ```bash
-git clone https://github.com/larvance/strata.git
-cd strata
-cargo install --path crates/tooling/strata_cli --locked
+git clone https://github.com/strataui/cli.git
+cd cli
+cargo install --path . --locked
 ```
 
 Verify your installation:

@@ -146,18 +146,18 @@ pub fn TelemetryDashboard() -> View {
 
 ## Quick Installation
 
-Install the Strata CLI toolchain directly via Cargo from GitHub:
+Install the Strata CLI toolchain directly via Cargo from crates.io:
 
 ```bash
-cargo install --git https://github.com/larvance/strata strata_cli --locked
+cargo install strata-ui-cli --locked
 ```
 
-Or clone the repository and build from source:
+Or clone the CLI repository and build from source:
 
 ```bash
-git clone https://github.com/larvance/strata.git
-cd strata
-cargo install --path crates/tooling/strata_cli --locked
+git clone https://github.com/strataui/cli.git
+cd cli
+cargo install --path . --locked
 ```
 
 Initialize your first production application:

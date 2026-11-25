@@ -31,14 +31,14 @@ export default defineConfig({
       { text: 'Architecture', link: '/architecture/overview' },
       { text: 'Ecosystem', link: '/ecosystem/developer-tools' },
       { text: 'Crates', link: '/crates/core/strata' },
-      { text: 'Harnesses', link: '/harnesses/strata-benchmark' },
+      { text: 'Harnesses', link: '/harnesses/strata-mobile-test' },
       { text: 'Benchmarks', link: '/benchmarks/scorecard' },
       { text: 'Showcase', link: '/showcase/examples' },
       {
         text: 'v0.1.0',
         items: [
-          { text: 'GitHub Repository', link: 'https://github.com/larvance/strata' },
-          { text: 'Release Notes', link: 'https://github.com/larvance/strata/releases' }
+          { text: 'GitHub Organization', link: 'https://github.com/strataui' },
+          { text: 'Core Repository', link: 'https://github.com/strataui/strata' }
         ]
       }
     ],
@@ -85,83 +85,67 @@ export default defineConfig({
             { text: 'DevTools & CDP Bridge', link: '/ecosystem/developer-tools' },
             { text: 'Language Server (LSP)', link: '/ecosystem/lsp-and-editor' },
             { text: 'Mobile & Simulator', link: '/ecosystem/mobile-and-simulator' },
-            { text: 'Plugins & C-FFI', link: '/ecosystem/plugins-and-ffi' }
+            { text: 'C-FFI & Embedding', link: '/ecosystem/plugins-and-ffi' }
           ]
         }
       ],
       '/crates/': [
         {
-          text: 'Core Primitives & Engine',
+          text: 'Core Primitives & Engine (strataui/strata)',
           items: [
-            { text: 'strata', link: '/crates/core/strata' },
+            { text: 'strata-ui', link: '/crates/core/strata' },
             { text: 'strata-primitives', link: '/crates/core/strata-primitives' },
             { text: 'strata-macro', link: '/crates/core/strata-macro' },
             { text: 'strata-dom', link: '/crates/core/strata-dom' },
             { text: 'strata-style', link: '/crates/core/strata-style' },
             { text: 'strata-layout', link: '/crates/core/strata-layout' },
-            { text: 'strata-aria', link: '/crates/core/strata-aria' }
-          ]
-        },
-        {
-          text: 'State & Extensibility',
-          items: [
-            { text: 'strata-crdt', link: '/crates/state/strata-crdt' },
-            { text: 'strata-store', link: '/crates/state/strata-store' },
-            { text: 'strata-router', link: '/crates/state/strata-router' },
-            { text: 'strata-plugin-runtime', link: '/crates/state/strata-plugin-runtime' },
-            { text: 'strata-ffi', link: '/crates/state/strata-ffi' }
+            { text: 'strata-a11y', link: '/crates/ui/strata-a11y' }
           ]
         },
         {
           text: 'Graphics, Rendering & Native Platform',
           items: [
             { text: 'strata-render', link: '/crates/render/strata-render' },
-            { text: 'strata-platform', link: '/crates/render/strata-platform' },
+            { text: 'strata-ui-platform', link: '/crates/render/strata-platform' },
             { text: 'strata-gpu-path', link: '/crates/render/strata-gpu-path' },
-            { text: 'strata-tui', link: '/crates/render/strata-tui' },
-            { text: 'strata-audio', link: '/crates/render/strata-audio' }
+            { text: 'strata-tui (strataui/tui)', link: '/crates/render/strata-tui' },
+            { text: 'strata-audio (strataui/audio)', link: '/crates/render/strata-audio' }
           ]
         },
         {
-          text: 'Runtime Systems & Web Engine',
+          text: 'Runtime Systems, Mica & Onyx',
           items: [
             { text: 'strata-vfs', link: '/crates/runtime/strata-vfs' },
             { text: 'strata-storage', link: '/crates/runtime/strata-storage' },
             { text: 'strata-device', link: '/crates/runtime/strata-device' },
             { text: 'strata-web-api', link: '/crates/runtime/strata-web-api' },
-            { text: 'strata-js', link: '/crates/runtime/strata-js' },
-            { text: 'strata-codegen-js', link: '/crates/runtime/strata-codegen-js' },
             { text: 'strata-parallel', link: '/crates/runtime/strata-parallel' },
-            { text: 'strata-web-reader', link: '/crates/runtime/strata-web-reader' }
+            { text: 'strata-ffi', link: '/crates/state/strata-ffi' },
+            { text: 'strata-js (strataui/mica)', link: '/crates/runtime/strata-js' },
+            { text: 'strata-codegen-js (strataui/mica)', link: '/crates/runtime/strata-codegen-js' },
+            { text: 'strata-web-reader (strataui/onyx)', link: '/crates/runtime/strata-web-reader' }
           ]
         },
         {
-          text: 'UI Component System & Generative Layer',
+          text: 'UI Components, Editor & App Kit',
           items: [
-            { text: 'strata-ui', link: '/crates/ui/strata-ui' },
-            { text: 'strata-icons', link: '/crates/ui/strata-icons' },
-            { text: 'strata-editor', link: '/crates/ui/strata-editor' },
-            { text: 'strata-charts', link: '/crates/ui/strata-charts' },
-            { text: 'strata-table', link: '/crates/ui/strata-table' },
-            { text: 'strata-virtual', link: '/crates/ui/strata-virtual' },
-            { text: 'strata-motion', link: '/crates/ui/strata-motion' },
-            { text: 'strata-form', link: '/crates/ui/strata-form' },
-            { text: 'strata-toast', link: '/crates/ui/strata-toast' },
-            { text: 'strata-i18n', link: '/crates/ui/strata-i18n' },
-            { text: 'strata-query', link: '/crates/ui/strata-query' },
-            { text: 'strata-a11y', link: '/crates/ui/strata-a11y' },
-            { text: 'strata-agent-ui', link: '/crates/ui/strata-agent-ui' }
+            { text: 'strata-components (strataui/components)', link: '/crates/ui/strata-ui' },
+            { text: 'strata-icons (strataui/components)', link: '/crates/ui/strata-icons' },
+            { text: 'strata-aria (strataui/components)', link: '/crates/core/strata-aria' },
+            { text: 'strata-editor (strataui/editor)', link: '/crates/ui/strata-editor' },
+            { text: 'strata-router (strataui/kit)', link: '/crates/state/strata-router' },
+            { text: 'strata-i18n (strataui/kit)', link: '/crates/ui/strata-i18n' },
+            { text: 'strata-ui-store (strataui/kit)', link: '/crates/state/strata-store' },
+            { text: 'strata-crdt (strataui/kit)', link: '/crates/state/strata-crdt' }
           ]
         },
         {
           text: 'Developer Tooling Crates',
           items: [
-            { text: 'strata-cli', link: '/crates/tooling/strata-cli' },
+            { text: 'strata-ui-cli (strataui/cli)', link: '/crates/tooling/strata-cli' },
             { text: 'strata-devtools', link: '/crates/tooling/strata-devtools' },
-            { text: 'strata-lsp', link: '/crates/tooling/strata-lsp' },
             { text: 'strata-hot-reload', link: '/crates/tooling/strata-hot-reload' },
-            { text: 'strata-build', link: '/crates/tooling/strata-build' },
-            { text: 'strata-mdbook', link: '/crates/tooling/strata-mdbook' }
+            { text: 'strata-lsp (strataui/vscode)', link: '/crates/tooling/strata-lsp' }
           ]
         }
       ],
@@ -169,11 +153,9 @@ export default defineConfig({
         {
           text: 'Testing & Harnesses',
           items: [
-            { text: 'Performance Benchmark', link: '/harnesses/strata-benchmark' },
             { text: 'Headless Mobile Test', link: '/harnesses/strata-mobile-test' },
             { text: 'Virtual Device Simulator', link: '/harnesses/strata-sim' },
-            { text: 'Tauri Visual Parity', link: '/harnesses/strata-parity-tauri' },
-            { text: 'Isolated Chromium Surface', link: '/harnesses/strata-chromium-surface' }
+            { text: 'Tauri Visual Parity (Internal)', link: '/harnesses/strata-parity-tauri' }
           ]
         }
       ],

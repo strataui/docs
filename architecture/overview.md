@@ -67,29 +67,29 @@ The workspace contains 25 specialized crates organized into cohesive layers:
 
 ### Platform Services & Runtime Abstraction
 - **`strata_platform`**: Native windowing, frameless client-side decorations, Mica/Acrylic vibrancy, and display servers.
-- **`strata_vfs`**: Universal virtual asynchronous filesystem (OPFS, XDG, app sandboxes).
-- **`strata_storage`**: Pure-Rust Bitcask append-only write-ahead log (`StrataKV`) and biometric secure keystore.
-- **`strata_device`**: Battery, thermals, safe area insets, memory pressure, and 120Hz ProMotion telemetry.
-- **`strata_web_api`**: W3C Web Platform APIs (`fetch`, WebSockets, WebRTC Data Channels, WebAudio 3D).
-- **`strata_audio`**: Low-latency 3D spatial audio graph and synthesis engine.
+- **`strata-vfs`**: Universal virtual asynchronous filesystem (OPFS, XDG, app sandboxes).
+- **`strata-storage`**: Pure-Rust Bitcask append-only write-ahead log (`StrataKV`) and biometric secure keystore.
+- **`strata-device`**: OS Geolocation/GPS, hardware sensors, battery, thermals, safe area insets, and 120Hz ProMotion telemetry.
+- **`strata-web-api`**: W3C Web Platform APIs (`fetch`, WebSockets, Geolocation, Clipboard, Streams).
+- **`strata-audio`** (`strataui/audio`): Low-latency 3D spatial audio graph and DSP synthesis engine.
 
 ### Cross-Target Compilation & Tooling
-- **`strata_tui`**: Terminal compilation target with double-buffered delta ANSI and Sixel/Kitty graphics.
-- **`strata_codegen_js`**: Source-to-source transpiler emitting zero-WASM pure JavaScript ESM.
-- **`strata_cli`**: CLI toolchain, project wizard, dev server, and packaging engine.
-- **`strata_devtools`**: In-process HUD, profiler, and Chrome DevTools Protocol (CDP) bridge.
-- **`strata_lsp`**: Full Language Server Protocol 3.17 server for editor integration.
-- **`strata_sim`**: Dogfooded native mobile device simulator and virtual phone OS.
-- **`strata_mobile_test`**: Headless automated mobile testing orchestrator.
+- **`strata-tui`** (`strataui/tui`): Terminal compilation target with double-buffered delta ANSI and Sixel/Kitty graphics.
+- **`strata-js` & `strata-codegen-js`** (`strataui/mica`): Pure-Rust ECMAScript runtime and zero-WASM JavaScript ESM codegen.
+- **`strata-ui-cli`** (`strataui/cli`): CLI toolchain (`strata`), project wizard, built-in state-preserving HMR dev server, mobile simulator (`strata-sim`), and mobile test runner (`strata-mobile-test`).
+- **`strata-devtools`**: In-process HUD, profiler, and Chrome DevTools Protocol (CDP) bridge.
+- **`strata-hot-reload`**: Epoch-staged native dynamic reloading with `HmrCodec` reactive state preservation.
+- **`strata-mcp`** (`strataui/mcp`): JSON-RPC 2.0 Model Context Protocol server for live app inspection and UI automation.
+- **`strata-lsp`** (`strataui/vscode`): Full Language Server Protocol 3.17 server for editor integration.
 
-### Advanced Innovations & Extensibility
-- **`strata_a11y`**: AccessKit accessibility tree bridge for native screen-readers.
-- **`strata_crdt`**: Conflict-free Replicated Data Type engine for real-time multiplayer signals.
-- **`strata_agent_ui`**: Streaming generative UI protocol and agentic execution bridge.
-- **`strata_build`**: Dynamic build-time plugin architecture.
-- **`strata_plugin_runtime`**: Sandboxed WASM dynamic plugin host.
-- **`strata_ffi`**: Zero-cost C ABI bindings for embedding Strata inside native C/C++/Swift applications.
-- **`strata_benchmark`**: Standardized benchmarking suite for latency and memory audits.
+### Ecosystem Products & C-FFI
+- **`strata-a11y`**: AccessKit accessibility tree bridge for native screen-readers.
+- **`strata-components`, `strata-icons`, `strata-aria`** (`strataui/components`): High-level UI component kit, 1,000+ vector icons, and accessible headless primitives.
+- **`strata-editor`** (`strataui/editor`): Monaco-class interactive `<CodeEditorWidget>` and rich-text document engine.
+- **`strata-earth`** (`strataui/earth`): 3D/2.5D/2D GPU planetary geospatial globe engine.
+- **`strata-router`, `strata-i18n`, `strata-ui-store`, `strata-crdt`** (`strataui/kit`): Optional SPA routing, ICU i18n, global store, and CRDT sync.
+- **`strata-web-reader`, `onyx-reader`, `onyx-browser`** (`strataui/onyx`): Zero-Chromium semantic web reader and native browser.
+- **`strata-ffi`**: Production C ABI bindings (`include/strata.h`) for embedding Strata inside C/C++/Python/Swift applications.
 
 ---
 

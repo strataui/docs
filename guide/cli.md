@@ -11,8 +11,8 @@ The **Strata CLI** (`strata`) is the command-line orchestrator and developer too
 Install the Strata CLI binary directly from source or the local workspace:
 
 ```bash
-# Install from workspace repository
-cargo install --path crates/tooling/strata_cli --bin strata
+# Install from crates.io (or `cargo install --path .` inside strataui/cli)
+cargo install strata-ui-cli --bin strata
 
 # Verify toolchain version
 strata version
