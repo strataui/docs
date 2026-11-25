@@ -393,3 +393,31 @@ fn test_battery_depletion_workflow() {
     controller.trigger_memory_pressure(MemoryPressure::Critical);
 }
 ```
+
+---
+
+## Expanded Sensors & Cross-Crate Bridges
+
+`strata-device` exposes reactive signals for 6 additional hardware sensor families:
+
+- **`use_proximity()` -> `Signal<ProximityReading>`**: Near/far distance detection in centimeters.
+- **`use_hinge_angle()` -> `Signal<HingeAngleReading>`**: Foldable display hinge angle + `FoldablePosture` (`Closed`, `HalfOpened`, `Flat`, `Tent`).
+- **`use_radio_signal()` -> `Signal<RadioSignalReading>`**: Live Wi-Fi/Cellular RSSI (dBm) and link quality (Linux `/proc/net/wireless` + mock).
+- **`use_ambient_spl()` -> `Signal<AmbientSplReading>`**: IEC 61672 A-weighted Sound Pressure Level (`dBA`), populated cycle-free from `strata-audio::AudioLevelMeter` via `register_ambient_spl_provider` (wired automatically by `strata::register_universal_io_bridges()`).
+- **`use_pedometer()` -> `Signal<PedometerReading>`**: Step count, cadence, and estimated distance.
+- **`use_heart_rate()` -> `Signal<HeartRateReading>`**: Beats per minute (BPM), populated cycle-free from `strata-hardware` BLE GATT Heart Rate Service (`0x180D`) via `register_heart_rate_provider`.
+
+---
+
+## Unified Permission Manager
+
+`strata_device::permissions` provides a cross-platform capability probe and request surface (`PermissionKind::{Microphone, Camera, ScreenCapture, Location, Notifications, Bluetooth, Serial, Hid, Biometrics}`):
+
+```rust
+use strata_device::permissions::{check_permission, use_permission, PermissionKind, PermissionStatus};
+
+let status = check_permission(PermissionKind::Microphone);
+let cam_perm = use_permission(PermissionKind::Camera);
+assert!(matches!(cam_perm.get(), PermissionStatus::Granted | PermissionStatus::Prompt | PermissionStatus::Denied | PermissionStatus::Restricted | PermissionStatus::Unavailable));
+```
+

@@ -599,3 +599,25 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 ```
+
+---
+
+## Pure-Rust Vector PDF 1.7 Exporter (`strata_render::pdf`)
+
+Enabled by default under the `pdf` feature (zero C dependencies), `strata_render::pdf` compiles any `DisplayList` directly into a resolution-independent **PDF 1.7** document with exact byte-offset `xref` tables, cubic Bezier rounded rectangles, vector text, SVG paths, RGB Image XObjects, alpha `ExtGState` dictionaries, and optional `FlateDecode` stream compression (`miniz_oxide`):
+
+```rust
+use strata_render::pdf::{export_display_list_to_pdf, PdfExportOptions, PdfPageSize};
+
+let opts = PdfExportOptions {
+    title: "Telemetry Report".into(),
+    page_size: PdfPageSize::A4,
+    compress: true,
+    ..Default::default()
+};
+let pdf_bytes: Vec<u8> = export_display_list_to_pdf(&display_list, &opts);
+assert!(pdf_bytes.starts_with(b"%PDF-1.7\n"));
+```
+
+From `strata-ui`, you can also export a live `AppRuntime` directly via `runtime.export_pdf_bytes(&opts)` or `runtime.export_pdf(path, &opts)` (and over C99 FFI via `strata_runtime_export_pdf`).
+

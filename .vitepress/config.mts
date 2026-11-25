@@ -103,13 +103,15 @@ export default defineConfig({
           ]
         },
         {
-          text: 'Graphics, Rendering & Native Platform',
+          text: 'Graphics, Rendering, Universal I/O & Platform',
           items: [
             { text: 'strata-render', link: '/crates/render/strata-render' },
             { text: 'strata-ui-platform', link: '/crates/render/strata-platform' },
             { text: 'strata-gpu-path', link: '/crates/render/strata-gpu-path' },
-            { text: 'strata-tui (strataui/tui)', link: '/crates/render/strata-tui' },
-            { text: 'strata-audio (strataui/audio)', link: '/crates/render/strata-audio' }
+            { text: 'strata-audio', link: '/crates/render/strata-audio' },
+            { text: 'strata-media', link: '/crates/io/strata-media' },
+            { text: 'strata-hardware', link: '/crates/io/strata-hardware' },
+            { text: 'strata-tui', link: '/crates/render/strata-tui' }
           ]
         },
         {
